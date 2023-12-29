@@ -13,16 +13,23 @@ print("VLINK Version 0.2")
 
 print(dir_list)
 
-while True:
-    
-    IP, Temp, RSSI ,SSID= display.get_info(False)
-    #display.infopage(IP,Temp,RSSI)
-    display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
-    #print(str(SSID,'utf-8'))
-    
-    #display.get_info(False) # print debug data on screen
-    button.get_input() #test buttons
-    time.sleep(2)
+try:
+    # Start the thread
+    button.button_thread.start()
+
+    # Main program loop
+    while True:
+        # Your main program logic can be executed here
+        IP, Temp, RSSI ,SSID= display.get_info(False)
+        display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
+        time.sleep(1)
+
+except KeyboardInterrupt:
+    # Cleanup GPIO settings
+    GPIO.cleanup()
+    # Exit the program
+    raise SystemExit
+
     
 
 

@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+import threading
 
 button_left = 12 #Button Left
 button_right = 21 # Button Right
@@ -16,15 +17,19 @@ GPIO.setup(button_up, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
+def button_1_handler():
+    while True:
+        input_state = GPIO.input(button_left)
+        if input_state == False:
+            print("Button 1 pressed")
+            # Do something when button 1 is pressed
+        time.sleep(0.1)
 
+button_1_thread = threading.Thread(target=button_1_handler)
 
 def get_input():
     page = 0 
-    while( GPIO.input(button_left) == GPIO.HIGH):
-        print("Button left")
-        page = page +1
-        time.sleep(0.2)
-        #mainpage()
+
         
         
     while( GPIO.input(button_right) == GPIO.HIGH):
@@ -44,5 +49,6 @@ def get_input():
         page = page -1
         time.sleep(0.2),
        # infopage()
+
 
     
