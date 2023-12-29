@@ -34,13 +34,13 @@ def get_input():
        # infopage()
                
     while( GPIO.input(button_up) == GPIO.HIGH):
-        print("Button 2")
+        print("Button up")
         page = page -1
         time.sleep(0.2),
        # infopage()
                
     while( GPIO.input(button_down) == GPIO.HIGH):
-        print("Button 1")
+        print("Button down")
         page = page -1
         time.sleep(0.2),
        # infopage()
