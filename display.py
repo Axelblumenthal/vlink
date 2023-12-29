@@ -4,7 +4,7 @@ from luma.core.render import canvas
 from luma.oled.device import ssd1327
 from PIL import ImageFont
 import time 
-
+from datetime import datetime
 import subprocess
 
 
@@ -43,10 +43,12 @@ def devices(draw):
 
 # Zeigt aktuelle Uhrzeit an
 def time(draw):
+    currentDateAndTime = datetime.now()
+    currentTime = currentDateAndTime.strftime("%H:%M")
     font_size = 15
     #arial_font = ImageFont.load_default(         )
     font = ImageFont.truetype(font_path,font_size)
-    draw.text((10,40),"13:50",font = font,fill="white")
+    draw.text((10,40),currentTime,font = font,fill="white")
     
 
 def network_rssi(draw,percent):
