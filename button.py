@@ -35,6 +35,7 @@ def button_2_handler():
         input_state = GPIO.input(button_right)
         if input_state == True:
             print("Button right pressed")
+            return True
             # Do something when button 1 is pressed
         time.sleep(0.2)
 
