@@ -28,16 +28,17 @@ def button_1_handler():
             # Do something when button 1 is pressed
         time.sleep(0.2)
         
-    
+   
 
 def button_2_handler():
     while True:
         input_state = GPIO.input(button_right)
         if input_state == True:
             print("Button right pressed")
-            return True
+            
             # Do something when button 1 is pressed
         time.sleep(0.2)
+        return(True)
 
 def button_3_handler():
     while True:
