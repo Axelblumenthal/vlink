@@ -51,30 +51,30 @@ def time(draw):
 
 def network_rssi(draw,percent):
     x_offset = 102
-    if percent > 60:
+    if int(percent) > 60:
         draw.rectangle((22+x_offset,1,24+x_offset,15), outline="white",fill="white") ###############
         draw.rectangle((17+x_offset,3,19+x_offset,15), outline="white",fill="white") #############
         draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
         draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
-    if percent > 50:
+    if int(percent)  > 50:
         
         draw.rectangle((17+x_offset,3,19+x_offset,15), outline="white",fill="white") #############
         draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
         draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
 
-    if percent > 40:
+    if int(percent)  > 40:
         
         draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
         draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######7
 
-    if percent > 30: 
+    if int(percent)  > 30: 
         draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
 
-    if percent > 20:
+    if int(percent)  > 20:
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
         
     return 0
