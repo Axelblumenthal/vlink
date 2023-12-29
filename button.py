@@ -20,12 +20,33 @@ def io_cleanup():
     GPIO.cleanup()
 
 def button_1_handler():
+    LONG_PRESS_DURATION =2
+    SHORT_PRESS_DURATION=0.5
     while True:
+        
         input_state = GPIO.input(button_left)
-        if input_state == True:
-            print("Button 1 pressed")
-            # Do something when button 1 is pressed
-        time.sleep(0.5)
+        if input_state == False:  # Button pressed
+            button_left = time.time()  # Record the press time
+
+            # Wait for button release or long press
+            while GPIO.input(button_left) == False:
+                time.sleep(0.1)
+                elapsed_time = time.time() - button_left
+
+                if elapsed_time >= LONG_PRESS_DURATION:
+                    print(f"Button left  long pressed")
+                    # Perform action for a long press
+                    break
+
+            if elapsed_time < LONG_PRESS_DURATION:
+                if elapsed_time < SHORT_PRESS_DURATION:
+                    print(f"Button left  short pressed")
+                    # Perform action for a short press
+                else:
+                    print(f"Button left pressed")
+                    # Perform action for a normal press
+
+            time.sleep(0.1)  # Delay to debounce
 
 button_1_thread = threading.Thread(target=button_1_handler)
 
