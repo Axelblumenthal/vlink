@@ -101,15 +101,7 @@ def menue_sidebar(draw):
     draw.text((85,128 - bar_height),"SETTINGS",font = font,fill="white")
 
 ############################## Bildschirme und Men f hrung ###################################
-def get_info():
-    cmd = "hostname -I | cut -d\' \' -f1"
-    IP = subprocess.check_output(cmd, shell = True )
-    cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
-    Temp = subprocess.check_output(cmd, shell = True )
-    cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
-    RSSI = subprocess.check_output(cmd, shell = True )
 
-    return IP,Temp,RSSI
 
 
 def mainpage():
