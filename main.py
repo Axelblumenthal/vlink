@@ -37,9 +37,9 @@ try:
 
         if page == 1:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
-        if page == 0:
-            display.infopage(IP,Temp,RSSI)
         if page == 2:
+            display.infopage(IP,Temp,RSSI)
+        if page == 0:
             display.setting()
             
 
