@@ -32,7 +32,7 @@ try:
             display.infopage(IP,Temp,RSSI)
         else:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
-        time.sleep(1)
+        time.sleep(0.1)
 
 except KeyboardInterrupt:
     # Cleanup GPIO settings
