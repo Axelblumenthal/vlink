@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import asyncio
 import threading
-
+import time
 
 
 pinLED = 25 # Red LED

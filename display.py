@@ -101,6 +101,17 @@ def menue_sidebar(draw):
     draw.text((85,128 - bar_height),"SETTINGS",font = font,fill="white")
 
 ############################## Bildschirme und Men f hrung ###################################
+def get_info():
+    cmd = "hostname -I | cut -d\' \' -f1"
+    IP = subprocess.check_output(cmd, shell = True )
+    cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
+    Temp = subprocess.check_output(cmd, shell = True )
+    cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
+    RSSI = subprocess.check_output(cmd, shell = True )
+
+    return IP,Temp,RSSI
+
+
 def mainpage():
     #print("Mainpage")
     with canvas(device) as draw:
@@ -110,14 +121,14 @@ def mainpage():
         network_rssi(draw,65)
         menue_sidebar(draw)
      
-def infopage():
+def infopage(IP,RSSI,Temp,):
     
     with canvas(device) as draw:
         draw.text((5, 5), "IP: " + str(IP,'utf-8'), fill=255)
         draw.text((5,15),"Temp: "+str(Temp,'utf-8'), fill=255)
         rssi_short = int(str(RSSI,'utf-8')[:2])
         draw.text((5,25),"RSSI: "+str(RSSI,'utf-8')[:6], fill=255)
-        draw.text((5,35),"Page"+str(page),fill=255)
+        
     
 
 def setting():
