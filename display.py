@@ -153,7 +153,7 @@ def infopage(IP,Temp,RSSI,CPU):
         draw.text((5,15),"Temp: "+str(Temp,'utf-8'), fill=255)
         rssi_short = int(str(RSSI,'utf-8')[:2])
         draw.text((5,25),"RSSI: "+str(RSSI,'utf-8')[:6], fill=255)
-        draw.text((5,35),"CPU: "+str(CPU,'utf-8')[:6], fill=255)
+        draw.text((5,35),str(CPU,'utf-8'), fill=255)
         
     
 
