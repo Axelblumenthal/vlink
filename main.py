@@ -28,7 +28,7 @@ try:
         IP, Temp, RSSI ,SSID= display.get_info(False)
         #display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         if turn == True:
-            display.infopage()
+            display.infopage(IP,Temp,RSSI)
         else:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         time.sleep(1)
