@@ -34,7 +34,7 @@ try:
             display.setting()
             
 
-        
+        print(page)
         #display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         if button.button_left_pressed == True and page <= 1:
             page += 1
