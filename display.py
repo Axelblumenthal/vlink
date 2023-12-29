@@ -27,11 +27,14 @@ def get_info(print_debug):
     Temp = subprocess.check_output(cmd, shell = True )
     cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
     RSSI = subprocess.check_output(cmd, shell = True )
+    cmd = "iwconfig wlan0 | grep ESSID "
+    SSID = subprocess.check_output(cmd, shell = True )
+
     
     if print_debug == True:
         print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') )
     
-    return IP,Temp,RSSI
+    return IP,Temp,RSSI,SSID
 
 # Zeigt akuell verbundene Ger te an
 def devices(draw):
@@ -49,7 +52,7 @@ def time(draw):
     font_path = "data//ARCADECLASSIC.TTF"
     #arial_font = ImageFont.load_default(         )
     font = ImageFont.truetype(font_path,font_size)
-    draw.text((10,40),currentTime,font = font,fill="white")
+    draw.text((10,40),currentTime,font=font,fill="white")
     
 
 def network_rssi(draw,percent):
