@@ -1,0 +1,1 @@
+pip install luma.oled==3.13.0
