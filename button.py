@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
 
-pinBUTTON = 12
-pinBUTTONminus = 16
-pinBus = 20
-pinBuss = 21
+pinBUTTON = 12 #Button Left
+pinBUTTONminus = 16 # Button Right
+pinBus = 20 # Button UP
+pinBuss = 21 # Button Down
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)

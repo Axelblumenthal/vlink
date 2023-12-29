@@ -4,9 +4,9 @@ import threading
 
 
 
-pinLED = 25
-pinRED = 24
-pinD = 23
+pinLED = 25 # Red LED
+pinRED = 24 # Blue LED
+pinD = 23   # Green LED
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
