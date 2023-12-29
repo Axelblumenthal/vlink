@@ -21,6 +21,8 @@ font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
 
 def get_info(print_debug):
     #time.sleep(2)
+    cmd = "top -bn1 | grep load | awk '{printf \"CPU: %.2f\", $(NF-2)}'"
+    CPU = subprocess.check_output(cmd, shell = True )
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True )
     cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
@@ -29,12 +31,12 @@ def get_info(print_debug):
     RSSI = subprocess.check_output(cmd, shell = True )
     cmd = "iwconfig wlan0 | grep ESSID | cut -d ':' -f2"
     SSID = subprocess.check_output(cmd, shell = True )
-
+    
     
     if print_debug == True:
-        print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') )
+        print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
     
-    return IP,Temp,RSSI,SSID
+    return IP,Temp,RSSI,SSID,CPU
 
 # Zeigt akuell verbundene Ger te an
 def devices(draw):
@@ -144,13 +146,14 @@ def mainpage(RSSI,SSID):
         network_rssi(draw,RSSI)
         menue_sidebar(draw)
      
-def infopage(IP,Temp,RSSI):
+def infopage(IP,Temp,RSSI,CPU):
     
     with canvas(device) as draw:
         draw.text((5, 5), "IP: " + str(IP,'utf-8'), fill=255)
         draw.text((5,15),"Temp: "+str(Temp,'utf-8'), fill=255)
         rssi_short = int(str(RSSI,'utf-8')[:2])
         draw.text((5,25),"RSSI: "+str(RSSI,'utf-8')[:6], fill=255)
+        draw.text((5,35),"CPU: "+str(CPU,'utf-8')[:6], fill=255)
         
     
 

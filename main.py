@@ -33,17 +33,17 @@ try:
         if page <= 0:
             page = 0
 
-        IP, Temp, RSSI ,SSID= display.get_info(False)
+        IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
 
         if page == 1:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         if page == 2:
-            display.infopage(IP,Temp,RSSI)
+            display.infopage(IP,Temp,RSSI,CPU)
         if page == 0:
             display.setting()
             
 
-        print(page)
+        #print(page)
         #display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         
           
