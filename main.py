@@ -24,10 +24,14 @@ try:
 
     # Main program loop
     while True:
-        if button.button_left_pressed == True and page <= 2:
+        if button.button_left_pressed == True:
             page += 1
-        if button.button_right_pressed == True and page >= 0:
+        if button.button_right_pressed == True:
             page -= 1
+        if page >= 2:
+            page = 2
+        if page <= 0:
+            page = 0
 
         IP, Temp, RSSI ,SSID= display.get_info(False)
 
