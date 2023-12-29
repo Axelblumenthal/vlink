@@ -15,10 +15,10 @@ print(dir_list)
 
 while True:
     
-    IP, Temp, RSSI = display.get_info(False)
+    IP, Temp, RSSI ,SSID= display.get_info(False)
     #display.infopage(IP,Temp,RSSI)
     display.mainpage(str(RSSI,'utf-8')[:2])
-
+    print(SSID)
     
     #display.get_info(False) # print debug data on screen
     button.get_input() #test buttons
