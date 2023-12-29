@@ -7,6 +7,9 @@ button_right = 21 # Button Right
 button_up    = 20 # Button UP
 button_down = 16 # Button Down
 
+
+button_left_pressed = False
+
 import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
