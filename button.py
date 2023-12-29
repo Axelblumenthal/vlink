@@ -57,6 +57,9 @@ def button_4_handler():
 
 
 button_1_thread = threading.Thread(target=button_1_handler)
+button_2_thread = threading.Thread(target=button_2_handler)
+button_3_thread = threading.Thread(target=button_3_handler)
+button_4_thread = threading.Thread(target=button_4_handler)
 
 
 def get_input():
