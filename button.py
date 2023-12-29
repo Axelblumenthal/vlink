@@ -15,10 +15,10 @@ GPIO.setup(pinBus, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(pinBuss, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
-page = 0 
+
 
 def get_input():
-
+    page = 0 
     while( GPIO.input(pinBUTTON) == GPIO.HIGH):
         print("Button 4")
         page = page +1
