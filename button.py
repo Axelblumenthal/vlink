@@ -20,7 +20,7 @@ GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 def button_1_handler():
     while True:
         input_state = GPIO.input(button_left)
-        if input_state == False:
+        if input_state == True:
             print("Button 1 pressed")
             # Do something when button 1 is pressed
         time.sleep(0.1)
