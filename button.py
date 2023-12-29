@@ -20,15 +20,15 @@ GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 def io_cleanup():
     GPIO.cleanup()
 
-def is_button_pressed(pin_index):
-    input_state = GPIO.input(button_left)
-    return input_state == False
+
 
 def button_1_handler():
+    global button_left_pressed
     while True:
         input_state = GPIO.input(button_left)
         if input_state == True:
             print("Button left pressed")
+            button_left_pressed = not button_left_pressed
             # Do something when button 1 is pressed
         time.sleep(0.2)
         
