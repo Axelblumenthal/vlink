@@ -156,10 +156,10 @@ def infopage(IP,Temp,RSSI):
 
 def setting():
    # print("Settings")
-    #menue_number = 1
+    menue_number = 1
     
-    #with canvas(device) as draw:
-    #   menue_rect(draw,menue_number)
+    with canvas(device) as draw:
+        menue_rect(draw,menue_number)
         
     return 0
 
