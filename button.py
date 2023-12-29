@@ -33,7 +33,7 @@ def button_1_handler():
     while True:
         input_state = GPIO.input(button_left)
         if input_state == True:
-            print("Button left pressed")
+            #print("Button left pressed")
             button_left_pressed = True
             # Do something when button 1 is pressed
         else:
