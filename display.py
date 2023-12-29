@@ -20,7 +20,7 @@ font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
 ############################### Anzeigefunktionen und Symbole ######################################
 
 def get_info(print_debug):
-    time.sleep(2)
+    #time.sleep(2)
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True )
     cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
