@@ -20,7 +20,7 @@ font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
 ############################### Anzeigefunktionen und Symbole ######################################
 
 def get_info(print_debug):
-    
+    time.sleep(2)
     cmd = "hostname -I | cut -d\' \' -f1"
     IP = subprocess.check_output(cmd, shell = True )
     cmd = "vcgencmd measure_temp |cut -f 2 -d '='"
@@ -30,7 +30,7 @@ def get_info(print_debug):
     
     if print_debug == True:
         print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') )
-    time.sleep(2)
+    
     return IP,Temp,RSSI
 
 # Zeigt akuell verbundene Ger te an
