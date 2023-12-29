@@ -27,7 +27,7 @@ def get_info(print_debug):
     Temp = subprocess.check_output(cmd, shell = True )
     cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
     RSSI = subprocess.check_output(cmd, shell = True )
-    cmd = "iwconfig wlan0 | grep ESSID "
+    cmd = "iwconfig wlan0 | grep ESSID  cut -d ':' "
     SSID = subprocess.check_output(cmd, shell = True )
 
     
