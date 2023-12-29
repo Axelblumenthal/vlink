@@ -14,7 +14,7 @@ dir_list = os.listdir(path)
 print("VLINK Version 0.2")
 
 print(dir_list)
-page =0
+page =1
 try:
     # Start the thread
     button.button_1_thread.start()
@@ -35,7 +35,7 @@ try:
 
         IP, Temp, RSSI ,SSID= display.get_info(False)
 
-        if page == 0:
+        if page == 1:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
         if page == 1:
             display.infopage(IP,Temp,RSSI)
