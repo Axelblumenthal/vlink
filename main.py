@@ -15,7 +15,8 @@ while True:
     IP, Temp, RSSI = display.get_info()
     display.infopage(IP,Temp,RSSI)
 
-    display.get_info(False) # print debug data on screen
+    
+    #display.get_info(False) # print debug data on screen
     button.get_input() #test buttons
 
 
