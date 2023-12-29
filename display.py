@@ -53,11 +53,11 @@ def print_SSSID(draw,SSID):
 def time(draw):
     currentDateAndTime = datetime.now()
     currentTime = currentDateAndTime.strftime("%H:%M")
-    font_size = 15
-    font_path = "data//ARCADECLASSIC.TTF"
+   # font_size = 15
+    #font_path = "data//ARCADECLASSIC.TTF"
     #arial_font = ImageFont.load_default(         )
-    font = ImageFont.truetype(font_path,font_size)
-    draw.text((10,40),currentTime,font=font,fill="white")
+    #font = ImageFont.truetype(font_path,font_size)
+    draw.text((10,40),currentTime,fill="white")
     
 
 def network_rssi(draw,percent):
