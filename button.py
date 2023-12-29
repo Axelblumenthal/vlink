@@ -33,7 +33,7 @@ def button_1_handler():
             print("Button left pressed")
             button_left_pressed = not button_left_pressed
             # Do something when button 1 is pressed
-        time.sleep(0.2)
+        time.sleep(0.5)
         
    
 
@@ -44,7 +44,7 @@ def button_2_handler():
             print("Button right pressed")
             
             # Do something when button 1 is pressed
-        time.sleep(0.2)
+        time.sleep(0.5)
         
 
 def button_3_handler():
@@ -53,7 +53,7 @@ def button_3_handler():
         if input_state == True:
             print("Button up pressed")
             # Do something when button 1 is pressed
-        time.sleep(0.2)
+        time.sleep(0.5)
         
 
 def button_4_handler():
@@ -62,7 +62,7 @@ def button_4_handler():
         if input_state == True:
             print("Button down pressed")
             # Do something when button 1 is pressed
-        time.sleep(0.2)
+        time.sleep(0.5)
 
 
 button_1_thread = threading.Thread(target=button_1_handler)
