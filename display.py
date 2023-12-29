@@ -3,15 +3,10 @@ from luma.core.interface.parallel import bitbang_6800
 from luma.core.render import canvas
 from luma.oled.device import ssd1327
 from PIL import ImageFont
-
+import time 
 
 import subprocess
-import os
 
-
-
-import asyncio
-import threading
 
 
 #Display Einrichten

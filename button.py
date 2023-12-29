@@ -4,7 +4,7 @@ pinBUTTON = 12 #Button Left
 pinBUTTONminus = 16 # Button Right
 pinBus = 20 # Button UP
 pinBuss = 21 # Button Down
-
+import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
