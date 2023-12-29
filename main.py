@@ -1,6 +1,6 @@
 import display
 import button
-from button import button_left_pressed
+#from button import button_left_pressed
 import led
 import time
 import os
