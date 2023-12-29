@@ -12,7 +12,7 @@ print("VLINK Version 0.2")
 
 while True:
     #display.mainpage()
-    IP, Temp, RSSI = display.get_info(False)
+    IP, Temp, RSSI = display.get_info()
     display.infopage(IP,Temp,RSSI)
 
     display.get_info(False) # print debug data on screen
