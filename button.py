@@ -32,7 +32,7 @@ def button_1_handler():
         input_state = GPIO.input(button_left)
         if input_state == True:
             print("Button left pressed")
-            button_left_pressed = not button_left_pressed
+            button_left_pressed = True
             # Do something when button 1 is pressed
         time.sleep(0.5)
         
@@ -44,6 +44,7 @@ def button_2_handler():
         input_state = GPIO.input(button_right)
         if input_state == True:
             print("Button right pressed")
+            button_right_pressed = True
             
             # Do something when button 1 is pressed
         time.sleep(0.5)
