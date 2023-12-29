@@ -15,7 +15,7 @@ print(dir_list)
 
 try:
     # Start the thread
-    button.button_thread.start()
+    button.button_1_thread.start()
 
     # Main program loop
     while True:
