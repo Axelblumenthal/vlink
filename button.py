@@ -1,9 +1,10 @@
 import RPi.GPIO as GPIO
 
 button_left = 12 #Button Left
-button_right = 16 # Button Right
+button_right = 21 # Button Right
 button_up    = 20 # Button UP
-button_down = 21 # Button Down
+button_down = 16 # Button Down
+
 import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
