@@ -121,7 +121,7 @@ def mainpage():
         network_rssi(draw,65)
         menue_sidebar(draw)
      
-def infopage(IP,RSSI,Temp,):
+def infopage(IP,Temp,RSSI):
     
     with canvas(device) as draw:
         draw.text((5, 5), "IP: " + str(IP,'utf-8'), fill=255)
