@@ -34,6 +34,8 @@ def button_1_handler():
             print("Button left pressed")
             button_left_pressed = True
             # Do something when button 1 is pressed
+        else:
+            button_left_pressed = False
         time.sleep(0.5)
         
    
@@ -45,6 +47,8 @@ def button_2_handler():
         if input_state == True:
             print("Button right pressed")
             button_right_pressed = True
+        else:
+            button_right_pressed = False
             
             # Do something when button 1 is pressed
         time.sleep(0.5)
