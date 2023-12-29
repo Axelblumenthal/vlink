@@ -57,6 +57,25 @@ def network_rssi(draw,percent):
         draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
         draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
         draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
+    if percent > 50:
+        
+        draw.rectangle((17+x_offset,3,19+x_offset,15), outline="white",fill="white") #############
+        draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
+        draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
+        draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
+
+    if percent > 40:
+        
+        draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
+        draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
+        draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######7
+
+    if percent > 30: 
+        draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
+        draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
+
+    if percent > 20:
+        draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
         
     return 0
 
@@ -104,13 +123,13 @@ def menue_sidebar(draw):
 
 
 
-def mainpage():
+def mainpage(RSSI):
     #print("Mainpage")
     with canvas(device) as draw:
         time(draw) # Zeit 
         battery(draw,95) # Batterie oben rechts 
         devices(draw) 
-        network_rssi(draw,65)
+        network_rssi(draw,RSSI)
         menue_sidebar(draw)
      
 def infopage(IP,Temp,RSSI):
