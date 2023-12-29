@@ -27,6 +27,34 @@ def button_1_handler():
             print("Button left pressed")
             # Do something when button 1 is pressed
         time.sleep(0.25)
+        
+    
+
+def button_2_handler():
+    while True:
+        input_state = GPIO.input(button_right)
+        if input_state == True:
+            print("Button right pressed")
+            # Do something when button 1 is pressed
+        time.sleep(0.25)
+
+def button_3_handler():
+    while True:
+        input_state = GPIO.input(button_up)
+        if input_state == True:
+            print("Button up pressed")
+            # Do something when button 1 is pressed
+        time.sleep(0.25)
+        
+
+def button_4_handler():
+    while True:
+        input_state = GPIO.input(button_down)
+        if input_state == True:
+            print("Button down pressed")
+            # Do something when button 1 is pressed
+        time.sleep(0.25)
+
 
 button_1_thread = threading.Thread(target=button_1_handler)
 
