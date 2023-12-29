@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import threading
 
-global button_left 
+ 
 button_left = 12 #Button Left
 button_right = 21 # Button Right
 button_up    = 20 # Button UP
@@ -20,7 +20,7 @@ GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 def io_cleanup():
     GPIO.cleanup()
 
-def button_1_handler():
+def button_1_handler(button_left):
     LONG_PRESS_DURATION =2
     SHORT_PRESS_DURATION=0.5
     while True:
@@ -49,7 +49,7 @@ def button_1_handler():
 
             time.sleep(0.1)  # Delay to debounce
 
-button_1_thread = threading.Thread(target=button_1_handler)
+button_1_thread = threading.Thread(target=button_1_handler(button_left))
 
 
 def get_input():
