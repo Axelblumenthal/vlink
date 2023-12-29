@@ -50,12 +50,13 @@ def time(draw):
     
 
 def network_rssi(draw,percent):
+    x_offset = 102
     if percent > 60:
-        draw.rectangle((22,1,24,15), outline="white",fill="white") ###############
-        draw.rectangle((17,3,19,15), outline="white",fill="white") #############
-        draw.rectangle((12,6,14,15), outline="white",fill="white") ###########
-        draw.rectangle((7,9,9,15), outline="white",fill="white") #########
-        draw.rectangle((2,13,4,15), outline="white",fill="white") ######
+        draw.rectangle((22+x_offset,1,24+x_offset,15), outline="white",fill="white") ###############
+        draw.rectangle((17+x_offset,3,19+x_offset,15), outline="white",fill="white") #############
+        draw.rectangle((12+x_offset,6,14+x_offset,15), outline="white",fill="white") ###########
+        draw.rectangle((7+x_offset,9,9+x_offset,15), outline="white",fill="white") #########
+        draw.rectangle((2+x_offset,13,4+x_offset,15), outline="white",fill="white") ######
         
     return 0
 
@@ -92,7 +93,7 @@ def mainpage():
         time(draw) # Zeit 
         battery(draw,95) # Batterie oben rechts 
         devices(draw) 
-        # Netzqualtit t
+        network_rssi(draw,65)
      
 def infopage():
     
