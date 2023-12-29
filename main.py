@@ -2,13 +2,16 @@ import display
 import button
 import led
 import time
+import os
 
+path  = "data//"
+dir_list = os.listdir(path)
 
 
 
 print("VLINK Version 0.2")
 
-
+print(dir_list)
 
 while True:
     
