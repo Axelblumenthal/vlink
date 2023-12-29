@@ -1,44 +1,44 @@
 import RPi.GPIO as GPIO
 
-pinBUTTON = 12 #Button Left
-pinBUTTONminus = 16 # Button Right
-pinBus = 20 # Button UP
-pinBuss = 21 # Button Down
+button_left = 12 #Button Left
+button_right = 16 # Button Right
+button_up    = 20 # Button UP
+button_down = 21 # Button Down
 import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 
-GPIO.setup(pinBUTTON, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(pinBUTTONminus, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(pinBus, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(pinBuss, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button_left, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button_right, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button_up, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
 
 
 def get_input():
     page = 0 
-    while( GPIO.input(pinBUTTON) == GPIO.HIGH):
-        print("Button 4")
+    while( GPIO.input(button_left) == GPIO.HIGH):
+        print("Button left")
         page = page +1
         time.sleep(0.2)
         #mainpage()
         
         
-    while( GPIO.input(pinBUTTONminus) == GPIO.HIGH):
-        print("Button 3")
+    while( GPIO.input(button_right) == GPIO.HIGH):
+        print("Button right")
         page = page -1
         time.sleep(0.2),
        # infopage()
                
-    while( GPIO.input(pinBus) == GPIO.HIGH):
+    while( GPIO.input(button_up) == GPIO.HIGH):
         print("Button 2")
         page = page -1
         time.sleep(0.2),
        # infopage()
                
-    while( GPIO.input(pinBuss) == GPIO.HIGH):
+    while( GPIO.input(button_down) == GPIO.HIGH):
         print("Button 1")
         page = page -1
         time.sleep(0.2),
