@@ -23,7 +23,7 @@ def io_cleanup():
 def button_1_handler():
     while True:
         input_state = GPIO.input(button_left)
-        if input_state == False:
+        if input_state == True:
             print("Button left pressed")
             # Do something when button 1 is pressed
         time.sleep(0.25)
