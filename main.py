@@ -26,7 +26,7 @@ try:
         # Your main program logic can be executed here
         IP, Temp, RSSI ,SSID= display.get_info(False)
         #display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
-        if button.button_1_handler == True:
+        if button.button_1_handler() == True:
             display.infopage()
         else:
             display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
