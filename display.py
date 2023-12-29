@@ -85,7 +85,21 @@ def menue_rect(draw,number):
     draw.rectangle((0,32*number,128,32+(32*number)),outline="white", fill=None)
     return 0
     
-            
+
+def menue_sidebar(draw):
+    bar_height = 12
+    font_size = 12
+    font = ImageFont.truetype("/home/blume/Video_Link/Video_Link/arial.ttf",font_size)
+    
+    draw.rectangle((0,127- bar_height,42,127),outline ="white",fill=None)
+    draw.text((2,128 - bar_height),"INFO",font = font,fill="white")
+
+    draw.rectangle((42,127 - bar_height,84,127),outline ="white",fill=None)
+    draw.text((43 ,128 - bar_height),"HOME",font = font,fill="white")
+
+    draw.rectangle((84,127 - bar_height,127,127),outline ="white",fill=None)
+    draw.text((85,128 - bar_height),"SETTINGS",font = font,fill="white")
+
 ############################## Bildschirme und Men f hrung ###################################
 def mainpage():
     #print("Mainpage")
@@ -94,6 +108,7 @@ def mainpage():
         battery(draw,95) # Batterie oben rechts 
         devices(draw) 
         network_rssi(draw,65)
+        menue_sidebar(draw)
      
 def infopage():
     
