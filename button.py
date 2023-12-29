@@ -9,6 +9,7 @@ button_down = 16 # Button Down
 
 
 button_left_pressed = False
+button_right_pressed = False
 
 import time
 GPIO.setmode(GPIO.BCM)
@@ -38,6 +39,7 @@ def button_1_handler():
    
 
 def button_2_handler():
+    global button_right_pressed
     while True:
         input_state = GPIO.input(button_right)
         if input_state == True:

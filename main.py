@@ -24,6 +24,11 @@ try:
 
     # Main program loop
     while True:
+        if button.button_left_pressed == True and page <= 2:
+            page += 1
+        if button.button_right_pressed == True and page >= 0:
+            page -= 1
+
         IP, Temp, RSSI ,SSID= display.get_info(False)
 
         if page == 0:
@@ -36,8 +41,7 @@ try:
 
         print(page)
         #display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
-        if button.button_left_pressed == True and page <= 1:
-            page += 1
+        
           
         time.sleep(0.1)
 
