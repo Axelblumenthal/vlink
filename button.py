@@ -33,7 +33,7 @@ def button_1_handler():
             print("Button left pressed")
             button_left_pressed = not button_left_pressed
             # Do something when button 1 is pressed
-        time.sleep(0.2)
+        time.sleep(0.01)
         
    
 
@@ -45,7 +45,7 @@ def button_2_handler():
             
             # Do something when button 1 is pressed
         time.sleep(0.2)
-        return(True)
+        
 
 def button_3_handler():
     while True:
