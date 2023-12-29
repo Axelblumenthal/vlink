@@ -16,6 +16,8 @@ GPIO.setup(button_right, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(button_up, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
+def io_cleanup():
+    GPIO.cleanup()
 
 def button_1_handler():
     while True:
@@ -23,9 +25,10 @@ def button_1_handler():
         if input_state == True:
             print("Button 1 pressed")
             # Do something when button 1 is pressed
-        time.sleep(0.1)
+        time.sleep(0.5)
 
 button_1_thread = threading.Thread(target=button_1_handler)
+
 
 def get_input():
     page = 0 

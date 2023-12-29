@@ -4,6 +4,7 @@ import led
 import time
 import os
 
+
 path  = "data//"
 dir_list = os.listdir(path)
 
@@ -26,7 +27,7 @@ try:
 
 except KeyboardInterrupt:
     # Cleanup GPIO settings
-    GPIO.cleanup()
+    button.io_cleanup()
     # Exit the program
     raise SystemExit
 
