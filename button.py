@@ -20,6 +20,10 @@ GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 def io_cleanup():
     GPIO.cleanup()
 
+def is_button_pressed(pin_index):
+    input_state = GPIO.input(button_left)
+    return input_state == False
+
 def button_1_handler():
     while True:
         input_state = GPIO.input(button_left)
