@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import threading
 
+global button_left 
 button_left = 12 #Button Left
 button_right = 21 # Button Right
 button_up    = 20 # Button UP
