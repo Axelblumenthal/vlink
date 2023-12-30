@@ -32,8 +32,7 @@ def get_info(print_debug):
     RSSI = subprocess.check_output(cmd, shell = True )
     cmd = "iwconfig wlan0 | grep ESSID | cut -d ':' -f2"
     SSID = subprocess.check_output(cmd, shell = True )
-    cmd = "iwconfig wlan0 | grep Signal level "
-    Signallevel = subprocess.check_output(cmd, shell = True )
+
     
     if str(RSSI,'utf-8')[:2] == '':
         RSSI = 0
@@ -41,7 +40,7 @@ def get_info(print_debug):
        RSS_Int= str(RSSI,'utf-8')[:2]
     
     if print_debug == True:
-        print(str(Signallevel,'utf-8')+"RSSI: "+str(RSSI)+ "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
+        print("RSSI: "+str(RSSI)+ "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
     
 
     return IP,Temp,RSS_Int,SSID,CPU
