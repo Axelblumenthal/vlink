@@ -135,7 +135,7 @@ def menue_sidebar(draw):
     draw.text((2,128 - bar_height),"INFO",fill="white")
 
     draw.rectangle((42,127 - bar_height,84,127),outline ="white",fill=None)
-    draw.text((43 ,128 - bar_height),"HOME"fill="white")
+    draw.text((43 ,128 - bar_height),"HOME",fill="white")
 
     draw.rectangle((84,127 - bar_height,127,127),outline ="white",fill=None)
     draw.text((85,128 - bar_height),"SETTINGS",fill="white")
