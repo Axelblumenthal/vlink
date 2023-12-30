@@ -15,17 +15,15 @@ from datetime import datetime
 
 # TODO GPS and Battery Suppor as well as 5 Button input
 
-
-
-currentDateAndTime = datetime.now()
-currentTime = currentDateAndTime.strftime("%H:%M")
-
 path  ="logfile.txt"
 
-with open(path, 'w') as file:
-    # Write content to the file
-    file.write("Video Link Log File")
-    file.wirte(currentDateAndTime.strftime("%d-%m-%Y"))
+f = open(path, "a")
+f.write("Now the file has more content!")
+f.close()
+
+
+
+
 
 print("VLINK Version 0.2")
 
