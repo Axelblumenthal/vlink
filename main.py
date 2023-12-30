@@ -20,7 +20,7 @@ from datetime import datetime
 currentDateAndTime = datetime.now()
 currentTime = currentDateAndTime.strftime("%H:%M")
 
-path  = "data//"+currentDateAndTime+"_logfile.txt"
+path  ="logfile.txt"
 
 with open(path, 'w') as file:
     # Write content to the file
@@ -29,7 +29,6 @@ with open(path, 'w') as file:
 
 print("VLINK Version 0.2")
 
-print(dir_list)
 page =1
 try:
     # Start the thread
