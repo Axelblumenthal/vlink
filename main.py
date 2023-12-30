@@ -4,6 +4,7 @@ import button
 import led
 import time
 import os
+from datetime import datetime
 
 
 
@@ -14,10 +15,17 @@ import os
 
 # TODO GPS and Battery Suppor as well as 5 Button input
 
-path  = "data//"
-dir_list = os.listdir(path)
 
 
+currentDateAndTime = datetime.now()
+currentTime = currentDateAndTime.strftime("%H:%M")
+
+path  = "data//"+currentDateAndTime+"_logfile.txt"
+
+with open(path, 'w') as file:
+    # Write content to the file
+    file.write("Video Link Log File")
+    file.wirte(currentDateAndTime.strftime("%d-%m-%Y"))
 
 print("VLINK Version 0.2")
 
