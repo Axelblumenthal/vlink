@@ -38,7 +38,7 @@ def get_info(print_debug):
        RSS_Int= str(RSSI,'utf-8')[:2]
     
     if print_debug == True:
-        print("RSSI: "+RSSI+ "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
+        print("RSSI: "+str(RSSI)+ "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
     
 
     return IP,Temp,RSS_Int,SSID,CPU
