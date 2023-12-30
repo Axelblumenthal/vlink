@@ -34,12 +34,14 @@ def get_info(print_debug):
     
     if str(RSSI,'utf-8')[:2] == '':
         RSSI = 0
+    else:
+       RSS_Int= str(RSSI,'utf-8')[:2]
     
     if print_debug == True:
         print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
     
 
-    return IP,Temp,str(RSSI,'utf-8')[:2],SSID,CPU
+    return IP,Temp,RSS_Int,SSID,CPU
 
 # Zeigt akuell verbundene Ger te an
 def devices(draw):
