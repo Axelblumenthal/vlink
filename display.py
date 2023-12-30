@@ -38,7 +38,8 @@ def get_info(print_debug):
     if print_debug == True:
         print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
     
-    return IP,Temp,RSSI,SSID,CPU
+
+    return IP,Temp,str(RSSI,'utf-8')[:2],SSID,CPU
 
 # Zeigt akuell verbundene Ger te an
 def devices(draw):

@@ -36,7 +36,7 @@ try:
         IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
 
         if page == 1:
-            display.mainpage(str(RSSI,'utf-8')[:2],str(SSID,'utf-8'))
+            display.mainpage(RSSI,str(SSID,'utf-8'))
         if page == 2:
             display.infopage(IP,Temp,RSSI,CPU)
         if page == 0:
