@@ -15,11 +15,7 @@ from datetime import datetime
 
 # TODO GPS and Battery Suppor as well as 5 Button input
 
-path  ="logfile.txt"
 
-f = open(path, "a")
-f.write("Now the file has more content!")
-f.close()
 
 
 
