@@ -20,7 +20,8 @@ font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
 ############################### Anzeigefunktionen und Symbole ######################################
 
 def get_info(print_debug):
-    #time.sleep(2)
+    time.sleep(2)
+    RSS_Int=0
     cmd = "top -bn1 | grep load | awk '{printf \"CPU: %.2f\", $(NF-2)}'"
     CPU = subprocess.check_output(cmd, shell = True )
     cmd = "hostname -I | cut -d\' \' -f1"
