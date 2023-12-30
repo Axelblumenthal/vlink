@@ -32,6 +32,8 @@ def get_info(print_debug):
     cmd = "iwconfig wlan0 | grep ESSID | cut -d ':' -f2"
     SSID = subprocess.check_output(cmd, shell = True )
     
+    if str(RSSI,'utf-8')[:2] == '':
+        RSSI = 0
     
     if print_debug == True:
         print("RSSI: "+str(RSSI,'utf-8')[:2] + "    IP: " + str(IP,'utf-8') + " Temp: "+str(Temp,'utf-8') +str(CPU,'utf-8'))
