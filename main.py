@@ -6,6 +6,14 @@ import time
 import os
 
 
+
+# TODO Argumente beim start für debugging einbauen
+# TODO Logging der Daten einbauen
+# TODO Programm crach sicher machen ?
+# TODO Menü einbauen , Netzwerkwechsel , stream start usw
+
+# TODO GPS and Battery Suppor as well as 5 Button input
+
 path  = "data//"
 dir_list = os.listdir(path)
 
