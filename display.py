@@ -49,8 +49,8 @@ def get_info(print_debug):
 # Zeigt akuell verbundene Ger te an
 def devices(draw):
     font_size = 15
-    font = ImageFont.truetype(font_path,font_size)
-    draw.text((10,60),"no device !",font = font,fill="white")
+   # font = ImageFont.truetype(font_path,font_size)
+    draw.text((10,60),"no device !",fill="white")
 
 def print_SSSID(draw,SSID):
     font_size = 15
