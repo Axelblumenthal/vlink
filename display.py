@@ -132,13 +132,13 @@ def menue_sidebar(draw):
     #font = ImageFont.truetype("/home/blume/Video_Link/Video_Link/arial.ttf",font_size)
     
     draw.rectangle((0,127- bar_height,42,127),outline ="white",fill=None)
-    draw.text((2,128 - bar_height),"INFO",font = font,fill="white")
+    draw.text((2,128 - bar_height),"INFO",fill="white")
 
     draw.rectangle((42,127 - bar_height,84,127),outline ="white",fill=None)
-    draw.text((43 ,128 - bar_height),"HOME",font = font,fill="white")
+    draw.text((43 ,128 - bar_height),"HOME"fill="white")
 
     draw.rectangle((84,127 - bar_height,127,127),outline ="white",fill=None)
-    draw.text((85,128 - bar_height),"SETTINGS",font = font,fill="white")
+    draw.text((85,128 - bar_height),"SETTINGS",fill="white")
 
 ############################## Bildschirme und Men f hrung ###################################
 
