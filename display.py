@@ -15,7 +15,7 @@ device = ssd1327(serial)
 
 #
 
-font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
+#font_path = "/home/blume/Video_Link/Video_Link/arial.ttf"
 
 ############################### Anzeigefunktionen und Symbole ######################################
 
