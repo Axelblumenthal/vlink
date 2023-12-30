@@ -128,8 +128,8 @@ def menue_rect(draw,number):
 
 def menue_sidebar(draw):
     bar_height = 12
-    font_size = 12
-    font = ImageFont.truetype("/home/blume/Video_Link/Video_Link/arial.ttf",font_size)
+    #font_size = 12
+    #font = ImageFont.truetype("/home/blume/Video_Link/Video_Link/arial.ttf",font_size)
     
     draw.rectangle((0,127- bar_height,42,127),outline ="white",fill=None)
     draw.text((2,128 - bar_height),"INFO",font = font,fill="white")
