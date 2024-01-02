@@ -29,8 +29,8 @@ try:
         print("Log File Opennd")
         currentDateAndTime = datetime.now()
         currentTime = currentDateAndTime.strftime("%d:%m:%Y")
-        file.write("VLink Logging File.\n")
-        file.write("Version 0.2.\t"+currentTime+"\n")
+       # file.write("VLink Logging File.\n")
+       # file.write("Version 0.2.\t"+currentTime+"\n")
         file.write(log("Starting UserInterface"))
 
 except:
