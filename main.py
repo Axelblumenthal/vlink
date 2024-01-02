@@ -16,9 +16,15 @@ from datetime import datetime
 # TODO GPS and Battery Suppor as well as 5 Button input
 
 
-f = open("/mnt/usb/demofile3.txt", "w")
-f.write("Woops! I have deleted the content!")
-f.close()
+file_path = '/mnt/usb/example_file.txt'  # Path to the file you want to create
+
+# Writing content to the file
+with open(file_path, 'w') as file:
+    file.write("This is some content written to the file.\n")
+    file.write("You can add more lines as needed.\n")
+    # Add any content you want inside the file
+
+print(f"File '{file_path}' has been created.")
 
 
 
