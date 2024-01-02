@@ -16,12 +16,17 @@ from datetime import datetime
 # TODO GPS and Battery Suppor as well as 5 Button input
 
 
-
+f = open("/mnt/usb/demofile3.txt", "w")
+f.write("Woops! I have deleted the content!")
+f.close()
 
 
 
 
 print("VLINK Version 0.2")
+
+
+
 
 page =1
 try:
@@ -42,7 +47,7 @@ try:
         if page <= 0:
             page = 0
 
-        IP, Temp, RSSI ,SSID,CPU= display.get_info(True)
+        IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
 
         if page == 1:
             display.mainpage(RSSI,str(SSID,'utf-8'))
