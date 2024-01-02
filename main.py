@@ -20,14 +20,15 @@ file_path = '/mnt/usb/example_file.txt'  # Path to the file you want to create
 
 # Writing content to the file
 with open(file_path, 'w') as file:
-    file.write("VLink Logging File.\n")
-    file.write("Version 0.2.\n")
+    print("Log File Opennd")
     currentDateAndTime = datetime.now()
-    currentTime = currentDateAndTime.strftime("%H:%M")
-    file.write(currentTime)
-    # Add any content you want inside the file
+    currentTime = currentDateAndTime.strftime("%d:%m:%Y")
+    file.write("VLink Logging File.\n")
+    file.write("Version 0.2."+currentTime+"\n")
+    
 
-print(f"File '{file_path}' has been created.")
+
+print(f"File '{file_path}' has been Updatet.")
 
 
 
