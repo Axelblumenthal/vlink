@@ -18,13 +18,19 @@ from datetime import datetime
 
 file_path = '/mnt/usb/example_file.txt'  # Path to the file you want to create
 
+def log(text):
+    currentDateAndTime = datetime.now()
+    currentTime = currentDateAndTime.strftime("%Y-%m-%d-%H:%M:%S")
+    return currentTime + text
+
 # Writing content to the file
 with open(file_path, 'w') as file:
     print("Log File Opennd")
     currentDateAndTime = datetime.now()
     currentTime = currentDateAndTime.strftime("%d:%m:%Y")
     file.write("VLink Logging File.\n")
-    file.write("Version 0.2."+currentTime+"\n")
+    file.write("Version 0.2.\t"+currentTime+"\n")
+    file.write(log("Starting UserInterface"))
     
 
 
