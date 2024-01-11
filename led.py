@@ -5,8 +5,8 @@ import time
 
 
 pinLED = 25 # Red LED
-pinRED = 24 # Blue LED
-pinD = 23   # Green LED
+pinRED = 8 # Blue LED
+pinD = 7   # Green LED
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
