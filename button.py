@@ -18,10 +18,10 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 
-GPIO.setup(button_left, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(button_right, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(button_up, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(button_left, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button_right, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button_up, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(button_down, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 def io_cleanup():
     GPIO.cleanup()
