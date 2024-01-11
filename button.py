@@ -33,7 +33,7 @@ def button_1_handler():
     while True:
         input_state = GPIO.input(button_left)
         if input_state == True:
-            #print("Button left pressed")
+            print("Button left pressed")
             button_left_pressed = True
             # Do something when button 1 is pressed
         else:
@@ -47,7 +47,7 @@ def button_2_handler():
     while True:
         input_state = GPIO.input(button_right)
         if input_state == True:
-           # print("Button right pressed")
+            print("Button right pressed")
             button_right_pressed = True
         else:
             button_right_pressed = False
@@ -61,7 +61,7 @@ def button_3_handler():
         global button_up_pressed
         input_state = GPIO.input(button_up)
         if input_state == True:
-           # print("Button up pressed")
+            print("Button up pressed")
             button_up_pressed = True
         else:
             button_up_pressed = False
@@ -74,7 +74,7 @@ def button_4_handler():
     while True:
         input_state = GPIO.input(button_down)
         if input_state == True:
-            #print("Button down pressed")
+            print("Button down pressed")
             button_down_pressed = True
         else:
             button_down_pressed = False
