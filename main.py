@@ -32,7 +32,7 @@ with open(file_path, 'a') as file:
        # file.write("Version 0.2.\t"+currentTime+"\n")
     file.write(log("Starting UserInterface"))
     
-
+#ha
 
 print(f"File '{file_path}' has been Updatet.")
 
