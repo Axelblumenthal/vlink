@@ -155,11 +155,11 @@ def mainpage(RSSI,SSID):
         time(draw) # Zeit 
     
        
-    battery(draw,95) # Batterie oben rechts 
-    devices(draw) 
-    print_SSSID(draw,SSID)
-    network_rssi(draw,RSSI)
-    menue_sidebar(draw)
+        battery(draw,95) # Batterie oben rechts 
+        devices(draw) 
+        print_SSSID(draw,SSID)
+        network_rssi(draw,RSSI)
+        menue_sidebar(draw)
      
 def infopage(IP,Temp,RSSI,CPU):
     
