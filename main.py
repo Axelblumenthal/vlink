@@ -16,7 +16,7 @@ from datetime import datetime
 # TODO GPS and Battery Suppor as well as 5 Button input
 
 
-file_path = '/Log_files/logfile.txt'  # Path to the file you want to create
+file_path = 'Log_files/logfile.txt'  # Path to the file you want to create
 
 def log(text):
     currentDateAndTime = datetime.now()
