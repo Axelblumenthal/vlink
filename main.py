@@ -71,20 +71,15 @@ try:
         IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
 
         if page == 1:
-            try:
-                display.mainpage(RSSI,str(SSID,'utf-8'))
-            except:
-                print("error occured,check cable or device!")
+            display.mainpage(RSSI,str(SSID,'utf-8'))
+
         if page == 2:
-            try:
-                display.infopage(IP,Temp,RSSI,CPU)
-            except:
-                print("error occured check cable!")
+            display.infopage(IP,Temp,RSSI,CPU)
+
         if page == 0:
-            try:
-                display.setting()
-            except:
-                print("errror occured!")
+
+            display.setting()
+
             
 
         #print(page)
