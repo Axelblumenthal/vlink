@@ -151,16 +151,15 @@ def menue_sidebar(draw):
 
 def mainpage(RSSI,SSID):
     #print("Mainpage")
-    try:
-        with canvas(device) as draw:
-            time(draw) # Zeit 
-    except:
-        print("error")
-        #battery(draw,95) # Batterie oben rechts 
-        #devices(draw) 
-        #print_SSSID(draw,SSID)
-        #network_rssi(draw,RSSI)
-        #menue_sidebar(draw)
+    with canvas(device) as draw:
+        time(draw) # Zeit 
+    
+       
+    battery(draw,95) # Batterie oben rechts 
+    devices(draw) 
+    print_SSSID(draw,SSID)
+    network_rssi(draw,RSSI)
+    menue_sidebar(draw)
      
 def infopage(IP,Temp,RSSI,CPU):
     
