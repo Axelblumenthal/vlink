@@ -34,6 +34,16 @@ with open(file_path, 'a') as file:
     
 #ha
 
+
+def log_write(file_path,text):
+    with open(file_path, 'a') as file:
+        print("Log File Opennd")
+        currentDateAndTime = datetime.now()
+        currentTime = currentDateAndTime.strftime("%d:%m:%Y")
+       # file.write("VLink Logging File.\n")
+       # file.write("Version 0.2.\t"+currentTime+"\n")
+        file.write(log(text))
+
 print(f"File '{file_path}' has been Updatet.")
 
 
@@ -63,6 +73,7 @@ try:
             page = 0
 
         IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
+        log_write(file_path,str(Temp))
 
         if page == 1:
             display.mainpage(RSSI,str(SSID,'utf-8'))
