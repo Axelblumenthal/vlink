@@ -151,8 +151,11 @@ def menue_sidebar(draw):
 
 def mainpage(RSSI,SSID):
     #print("Mainpage")
-    with canvas(device) as draw:
-        time(draw) # Zeit 
+    try:
+        with canvas(device) as draw:
+            time(draw) # Zeit 
+    except:
+        print("error")
         #battery(draw,95) # Batterie oben rechts 
         #devices(draw) 
         #print_SSSID(draw,SSID)
@@ -173,10 +176,11 @@ def infopage(IP,Temp,RSSI,CPU):
 def setting():
    # print("Settings")
     menue_number = 1
-    
-    with canvas(device) as draw:
-        menue_rect(draw,menue_number)
-        
+    try:
+        with canvas(device) as draw:
+            menue_rect(draw,menue_number)
+    except:
+        print("error in display")
     return 0
 
 def user_interface():
