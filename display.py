@@ -69,7 +69,10 @@ def time(draw):
     #font_path = "data//ARCADECLASSIC.TTF"
     #arial_font = ImageFont.load_default(         )
     #font = ImageFont.truetype(font_path,font_size)
-    draw.text((10,40),currentTime,fill="white")
+    try:
+        draw.text((10,40),currentTime,fill="white")
+    except:
+        print("error ocurred with display.Check cables")
     
 
 def network_rssi(draw,percent):
@@ -150,11 +153,11 @@ def mainpage(RSSI,SSID):
     #print("Mainpage")
     with canvas(device) as draw:
         time(draw) # Zeit 
-        battery(draw,95) # Batterie oben rechts 
-        devices(draw) 
-        print_SSSID(draw,SSID)
-        network_rssi(draw,RSSI)
-        menue_sidebar(draw)
+        #battery(draw,95) # Batterie oben rechts 
+        #devices(draw) 
+        #print_SSSID(draw,SSID)
+        #network_rssi(draw,RSSI)
+        #menue_sidebar(draw)
      
 def infopage(IP,Temp,RSSI,CPU):
     
