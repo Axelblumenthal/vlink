@@ -41,7 +41,7 @@ except:
 
 print(f"File '{file_path}' has been Updatet.")
 
-
+log("Hallo Ballo")
 
 
 print("VLINK Version 0.2")
