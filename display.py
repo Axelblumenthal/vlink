@@ -10,8 +10,11 @@ import subprocess
 
 
 #Display Einrichten
-serial = i2c(port=1,address=0x3D)
-device = ssd1327(serial)
+try:
+    serial = i2c(port=1,address=0x3D)
+    device = ssd1327(serial)
+except:
+    print("Display not working corectly")
 
 #
 
