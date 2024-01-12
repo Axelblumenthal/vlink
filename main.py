@@ -16,7 +16,7 @@ from datetime import datetime
 # TODO GPS and Battery Suppor as well as 5 Button input
 
 
-file_path = '/Desktop/logfile.txt'  # Path to the file you want to create
+file_path = '/Log_files/logfile.txt'  # Path to the file you want to create
 
 def log(text):
     currentDateAndTime = datetime.now()
@@ -24,24 +24,18 @@ def log(text):
     return currentTime + text
 
 # Writing content to the fill
-try:
-    with open(file_path, 'a') as file:
-        print("Log File Opennd")
-        currentDateAndTime = datetime.now()
-        currentTime = currentDateAndTime.strftime("%d:%m:%Y")
+with open(file_path, 'a') as file:
+    print("Log File Opennd")
+    currentDateAndTime = datetime.now()
+    currentTime = currentDateAndTime.strftime("%d:%m:%Y")
        # file.write("VLink Logging File.\n")
        # file.write("Version 0.2.\t"+currentTime+"\n")
-        file.write(log("Starting UserInterface"))
-
-except:
-    ("no usb device conectet!!!")
-    SystemExit
+    file.write(log("Starting UserInterface"))
     
 
 
 print(f"File '{file_path}' has been Updatet.")
 
-log("Hallo Ballo")
 
 
 print("VLINK Version 0.2")
