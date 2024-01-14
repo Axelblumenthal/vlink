@@ -7,23 +7,24 @@ import subprocess
 import time
 import threading
 
-# AF_INET refers to the address of family of ip4v
-# SOCK_DGRAM means connection-oriented UDP protocol
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Gives UDP protocol to follow
-s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1900000)  # Set socket buffer size
-serverip = "192.168.178.45"  # Server public IP
-serverport = 2323  # Server Port Number to identify the process that needs to receive or send packets
 
-# Set the desired resolution to 720p (1280x720)
-cap = cv2.VideoCapture(0)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
-
-qual = 30
-desired_bitrate_mbps = 2.5
 
 # In order to iterate over a block of code as long as the test expression is true
 def transmit():
+    # AF_INET refers to the address of family of ip4v
+# SOCK_DGRAM means connection-oriented UDP protocol
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Gives UDP protocol to follow
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 1900000)  # Set socket buffer size
+    serverip = "192.168.178.45"  # Server public IP
+    serverport = 2323  # Server Port Number to identify the process that needs to receive or send packets
+
+# Set the desired resolution to 720p (1280x720)
+    cap = cv2.VideoCapture(0)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
+    qual = 30
+    desired_bitrate_mbps = 2.5
     while True:
         start_time = time.time()
 
