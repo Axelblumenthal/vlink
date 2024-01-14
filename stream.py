@@ -20,7 +20,7 @@ def transmit():
 
 # Set the desired resolution to 720p (1280x720)
     cap = cv2.VideoCapture(0)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 720)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 920)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
     qual = 85
