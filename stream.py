@@ -23,7 +23,7 @@ def transmit():
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 720)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
-    qual = 50
+    qual = 85
     desired_bitrate_mbps = 5
     while True:
         start_time = time.time()
