@@ -5,7 +5,7 @@ import led
 import time
 import os
 from datetime import datetime
-
+import stream
 
 
 # TODO Argumente beim start für debugging einbauen
@@ -60,6 +60,7 @@ try:
     button.button_2_thread.start()
     button.button_3_thread.start()
     button.button_4_thread.start()
+    stream.transmit_thread.start()
 
     # Main program loop
     while True:
@@ -73,7 +74,7 @@ try:
             page = 0
 
         IP, Temp, RSSI ,SSID,CPU= display.get_info(False)
-        log_write(file_path,str(Temp,'utf-8'))
+        log_write(file_path,str(Temp,'utf-8')+RSSI)
 
         if page == 1:
             display.mainpage(RSSI,str(SSID,'utf-8'))
