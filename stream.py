@@ -28,18 +28,18 @@ def transmit():
     while True:
         start_time = time.time()
 
-        cmd = "vcgencmd measure_temp | cut -f 2 -d '='"
-        Temp = subprocess.check_output(cmd, shell=True)
-        Temp = str(Temp, 'utf-8')
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
-        RSSI = subprocess.check_output(cmd, shell=True)
-        RSSI = str(RSSI, 'utf-8')[:2]
+        #cmd = "vcgencmd measure_temp | cut -f 2 -d '='"
+        #Temp = subprocess.check_output(cmd, shell=True)
+        #Temp = str(Temp, 'utf-8')
+        #now = datetime.now()
+        #current_time = now.strftime("%H:%M:%S")
+        #cmd = "iwconfig wlan0 | grep Quality | cut -d '=' -f2"
+        #RSSI = subprocess.check_output(cmd, shell=True)
+        #RSSI = str(RSSI, 'utf-8')[:2]
 
         ret, photo = cap.read()  # Start Capturing images/video
-        photo = cv2.putText(photo, 'Time: ' + current_time + '    Temp:' + Temp + '   RSSI:' + RSSI,
-                        (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+        #photo = cv2.putText(photo, 'Time: ' + current_time + '    Temp:' + Temp + '   RSSI:' + RSSI,
+         #               (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
         ret, buffer = cv2.imencode(".jpg", photo, [int(cv2.IMWRITE_JPEG_QUALITY), qual])
         x_as_bytes = pickle.dumps(buffer)
