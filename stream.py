@@ -60,5 +60,5 @@ def transmit():
 transmit_thread = threading.Thread(target=transmit)
 # Destroy all Windows/close
 #cv2.destroyAllWindows()
-cap.release()
+#cap.release()
 
