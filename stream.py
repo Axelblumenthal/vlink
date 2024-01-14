@@ -20,8 +20,8 @@ def transmit():
 
 # Set the desired resolution to 720p (1280x720)
     cap = cv2.VideoCapture(0)
-    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
-    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 720)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
     qual = 30
     desired_bitrate_mbps = 2.5
